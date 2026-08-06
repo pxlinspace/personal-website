@@ -1,12 +1,16 @@
 <script lang="ts">
-	let { title, children } = $props();
+	let { title, flexGrow = 0, isContentBoxed = true, children } = $props();
 </script>
 
-<div class="outer-border">
+<div class="outer-border bordered" style="flex-grow: {flexGrow};">
 	<h1 class="bar">{title}</h1>
-	<div class="content">
+	{#if isContentBoxed}
+		<div class="content">
+			{@render children?.()}
+		</div>
+	{:else}
 		{@render children?.()}
-	</div>
+	{/if}
 </div>
 
 <style>
@@ -17,6 +21,7 @@
 		padding: 3px;
 		display: flex;
 		flex-direction: column;
+		height: fit-content;
 	}
 	.bar {
 		background: var(--foreground-color);

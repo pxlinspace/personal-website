@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import FishCanvas from '$lib/components/FishCanvas.svelte';
 
 	let { children } = $props();
 </script>
@@ -8,4 +9,5 @@
 	<link rel="icon" href="/favicon.svg" />
 </svelte:head>
 
+<FishCanvas />
 {@render children()}

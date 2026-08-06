@@ -282,10 +282,10 @@
 	});
 </script>
 
-<canvas id="idiot-canvas" bind:this={canvas}></canvas>
+<canvas bind:this={canvas}></canvas>
 
 <style>
-	#idiot-canvas {
+	canvas {
 		position: absolute;
 		top: 0;
 		left: 0;

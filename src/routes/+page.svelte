@@ -8,11 +8,12 @@
 
 <div style="display: flex; align-items: center">
 	<Window title="intro" flexGrow={1}>
-		<h2>Helooo, I'm <span class="gradient-text">Pixelin</span>! (@pxlinspace)</h2>
-		<p>- I'm an 18yo gamedev + animator from San Jose, CA</p>
-		<p>- studying <b>CSE</b> @ <b>UC Irvine</b></p>
-		<p>(<a href="/about">more about me</a>)</p>
-		<div style="height: 40px;"></div>
+		<div style="position: relative; z-index: 1; margin-bottom: 60px">
+			<h2>Helooo, I'm <span class="gradient-text">Pixelin</span>! (@pxlinspace)</h2>
+			<p>- I'm an 18yo gamedev + animator from San Jose, CA</p>
+			<p>- studying <b>CSE</b> @ <b>UC Irvine</b></p>
+			<p>(<a href="/about">more about me</a>)</p>
+		</div>
 		<IdiotCanvas />
 	</Window>
 
@@ -22,7 +23,7 @@
 </div>
 
 <div style="display: flex">
-	<div>
+	<div style="display: flex; flex-direction: column;">
 		<Window title="nav">
 			<SideLink href="/" iconSrc={iconMap.blog}>blog</SideLink>
 			<SideLink href="/" iconSrc={iconMap.projects}>projects</SideLink>

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Window from '$lib/components/Window.svelte';
-	import SideLink from '$lib/components/+SideLink.svelte';
+	import SideLink from '$lib/components/SideLink.svelte';
+	import IdiotCanvas from '$lib/components/IdiotCanvas.svelte';
 	import { iconMap } from '$lib/icons';
 	import me from '$lib/assets/images/me.gif';
 </script>
@@ -10,7 +11,9 @@
 		<h2>Helooo, I'm <span class="gradient-text">Pixelin</span>! (@pxlinspace)</h2>
 		<p>- I'm an 18yo gamedev + animator from San Jose, CA</p>
 		<p>- studying <b>CSE</b> @ <b>UC Irvine</b></p>
-		<p>more about me</p>
+		<p>(<a href="/about">more about me</a>)</p>
+		<div style="height: 40px;"></div>
+		<IdiotCanvas />
 	</Window>
 
 	<Window title="me" isContentBoxed={false}>
@@ -29,13 +32,21 @@
 		</Window>
 
 		<Window title="socials">
-			<SideLink href="/" iconSrc={iconMap.youtube}>youtube</SideLink>
-			<SideLink href="/" iconSrc={iconMap.instagram}>instagram</SideLink>
-			<SideLink href="/" iconSrc={iconMap.bluesky}>bluesky</SideLink>
-			<SideLink href="/" iconSrc={iconMap.tumblr}>tumblr</SideLink>
-			<SideLink href="/" iconSrc={iconMap.mastodon}>mastodon</SideLink>
-			<SideLink href="/" iconSrc={iconMap.itchio}>itch.io</SideLink>
-			<SideLink href="/" iconSrc={iconMap.github}>github</SideLink>
+			<SideLink href="https://www.youtube.com/@pxlinspace" iconSrc={iconMap.youtube}>
+				youtube
+			</SideLink>
+			<SideLink href="https://www.instagram.com/pxlin.space" iconSrc={iconMap.instagram}>
+				instagram
+			</SideLink>
+			<SideLink href="https://bsky.app/profile/pxlin.space" iconSrc={iconMap.bluesky}>
+				bluesky
+			</SideLink>
+			<SideLink href="https://www.tumblr.com/pxlinspace" iconSrc={iconMap.tumblr}>tumblr</SideLink>
+			<SideLink href="https://sunny.garden/@pxlinspace" iconSrc={iconMap.mastodon}>
+				mastodon
+			</SideLink>
+			<SideLink href="https://pxlinspace.itch.io" iconSrc={iconMap.itchio}>itch.io</SideLink>
+			<SideLink href="https://www.github.com/pxlinspace" iconSrc={iconMap.github}>github</SideLink>
 		</Window>
 	</div>
 	<Window title="news" flexGrow={1}>

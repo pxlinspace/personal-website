@@ -8,7 +8,7 @@
 	a {
 		display: flex;
 		align-items: end;
-		gap: 4px;
+		gap: 5px;
 		img {
 			filter: invert(61%) sepia(37%) saturate(279%) hue-rotate(117deg) brightness(91%) contrast(89%);
 			width: 16px;

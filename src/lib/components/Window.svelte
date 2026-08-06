@@ -35,5 +35,6 @@
 		flex-grow: 1;
 		border: 3px solid var(--foreground-color);
 		padding: 0.25rem;
+		position: relative;
 	}
 </style>

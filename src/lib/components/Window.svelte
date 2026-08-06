@@ -5,7 +5,7 @@
 <div class="outer-border">
 	<h1 class="bar">{title}</h1>
 	<div class="content">
-		{@render children()}
+		{@render children?.()}
 	</div>
 </div>
 

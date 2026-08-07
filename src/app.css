@@ -36,10 +36,6 @@ body {
 	padding: 0.25rem;
 }
 
-p {
-	margin: 0.5rem 0;
-}
-
 a {
 	color: var(--miku-color);
 	text-decoration: none;
@@ -58,6 +54,10 @@ li {
 
 .bordered {
 	border: 3px solid var(--foreground-color);
+}
+
+.pixelated {
+	image-rendering: pixelated;
 }
 
 .responsive-row-to-column {

@@ -10,15 +10,18 @@
 	<Window title="intro" flexGrow={1}>
 		<div style="position: relative; z-index: 1; margin-bottom: 60px">
 			<h2>Helooo, I'm <span class="gradient-text">Pixelin</span>! (@pxlinspace)</h2>
-			<p>- I'm an 18yo gamedev + animator from San Jose, CA</p>
-			<p>- studying <b>CSE</b> @ <b>UC Irvine</b></p>
+			<ul>
+				<li>I'm an 18yo gamedev + animator from San Jose, CA</li>
+				<li>studying Computer Science & Engineering @ <b>UC Irvine</b></li>
+			</ul>
+
 			<p>(<a href="/about">more about me</a>)</p>
 		</div>
 		<IdiotCanvas />
 	</Window>
 
 	<Window title="me" isContentBoxed={false}>
-		<img src={me} alt="Pixelin" class="bordered" id="me" />
+		<img src={me} alt="Pixelin" class="bordered pixelated" width="240px" />
 	</Window>
 </div>
 
@@ -56,11 +59,6 @@
 </div>
 
 <style>
-	#me {
-		image-rendering: pixelated;
-		width: 240px;
-		height: 240px;
-	}
 	.gradient-text {
 		background: linear-gradient(135deg, #cf39ed, #257beb, #cf39ed);
 		background-size: 400% auto;

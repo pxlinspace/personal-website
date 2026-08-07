@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Window from '$lib/components/Window.svelte';
+	import coolestCat from '$lib/assets/images/coolest-cat.png';
 </script>
 
 <p>
@@ -7,19 +8,63 @@
 </p>
 
 <Window title="hiiii!!!!!!!">
-	<p>
-		Hello random internet person! I'm Pixelin, a person that likes to make silly useless and
-		occasionally useful things.
-	</p>
+	<div style="display: flex;">
+		<div>
+			<p>
+				Hello random internet person! I'm Pixelin, a person that likes to make silly useless and
+				occasionally useful things.
+			</p>
+			<p>
+				This website is a place for me to link all of my shtuff, and also to experiment with web
+				design!
+			</p>
+			<ul>
+				<li>My bday is December 7</li>
+				<li>
+					INTP 4w5 (I think??? I'm not as into typology anymore since I feel like it limits your
+					perception of your identity)
+				</li>
+			</ul>
+		</div>
+
+		<img
+			src={coolestCat}
+			alt="the coolest cat doing a kickflip on a skateboard"
+			class="pixelated"
+			width="432px"
+			height="432px"
+		/>
+	</div>
 </Window>
 
 <Window title="hobbies">
 	<ul>
-		<li>Making games</li>
-		<li>Playing games ofc</li>
-		<li>Drawing art (both digital and traditional) & animating</li>
-		<li>Building papercrafts</li>
-		<li>Making origami! Especially paper cranes</li>
+		<li>
+			<b>Game development:</b> IMO it's the best art form. Not only is it technical, but making games
+			encourages you to try out so many things: art, music production, UI/UX design, marketing, etc.
+		</li>
+		<li>
+			<b>Playing games lol:</b> ofc I'm so passionate about gamedev because video games make up such a
+			large part of my childhood (MINECRAFT ON THE XBOX 360!!!!!!!!!!!!!)
+		</li>
+		<li>
+			<b>Making animations:</b> I love visualizing videos in my head whenever I'm listening to music or
+			thinking about game cutscenes! Nowadays I mostly just animate game sprites.
+		</li>
+		<li>
+			<b>Digital art (and occasionally traditional art):</b> Hobby that comes alongside with learning
+			how to animate
+		</li>
+		<li>
+			<b>Building papercrafts:</b> it started with Minecraft papercraft templates and I kinda just got
+			into it from there. It's super cool being able to bring low-poly to real life with only paper and
+			a printer!
+		</li>
+		<li>
+			<b>Origami:</b> it's my childhood hobby, though I don't do it nearly as much anymore. I used to
+			have an origami box that got so filled up that everything inside was crumpled. I still make paper
+			cranes with restaurant napkins whenever I'm bored.
+		</li>
 	</ul>
 </Window>
 

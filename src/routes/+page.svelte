@@ -6,6 +6,10 @@
 	import me from '$lib/assets/images/me.gif';
 </script>
 
+<svelte:head>
+	<title>@pxlinspace</title>
+</svelte:head>
+
 <div style="display: flex; align-items: center">
 	<Window title="intro" flexGrow={1}>
 		<div style="position: relative; z-index: 1; margin-bottom: 60px">
@@ -28,7 +32,7 @@
 <div style="display: flex">
 	<div style="display: flex; flex-direction: column;">
 		<Window title="nav">
-			<SideLink href="/" iconSrc={iconMap.blog}>blog</SideLink>
+			<SideLink href="https://blog.pxlin.space/" iconSrc={iconMap.blog}>blog</SideLink>
 			<SideLink href="/" iconSrc={iconMap.projects}>projects</SideLink>
 			<SideLink href="/" iconSrc={iconMap.art}>art</SideLink>
 			<SideLink href="/" iconSrc={iconMap.music}>music</SideLink>

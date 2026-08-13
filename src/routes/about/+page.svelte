@@ -3,6 +3,10 @@
 	import coolestCat from '$lib/assets/images/coolest-cat.png';
 </script>
 
+<svelte:head>
+	<title>@pxlinspace - about</title>
+</svelte:head>
+
 <p>
 	( <a href="/">&lt;- back</a> )
 </p>
@@ -19,10 +23,15 @@
 				design!
 			</p>
 			<ul>
-				<li>My bday is December 7</li>
+				<li>bday is December 7</li>
 				<li>
 					INTP 4w5 (I think??? I'm not as into typology anymore since I feel like it limits your
 					perception of your identity)
+				</li>
+				<li>
+					fav colors are
+					<span class="lavender">&nbsp;lavender&nbsp;</span> and
+					<span class="periwinkle">&nbsp;periwinkle&nbsp;</span>.
 				</li>
 			</ul>
 		</div>
@@ -274,3 +283,14 @@
 		There's also friends, family, teachers, etc. but I won't name them.
 	</p>
 </Window>
+
+<style>
+	.lavender {
+		background-color: #af93d5;
+		color: black;
+	}
+	.periwinkle {
+		background-color: #ccccff;
+		color: black;
+	}
+</style>

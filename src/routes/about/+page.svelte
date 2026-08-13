@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>@pxlinspace - about</title>
+	<title>about &middot; pxlinspace</title>
 </svelte:head>
 
 <p>

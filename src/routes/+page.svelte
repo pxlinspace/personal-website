@@ -2,18 +2,19 @@
 	import Window from '$lib/components/Window.svelte';
 	import SideLink from '$lib/components/SideLink.svelte';
 	import IdiotCanvas from '$lib/components/IdiotCanvas.svelte';
+	import WavySpan from '$lib/components/WavySpan.svelte';
 	import { iconMap } from '$lib/icons';
 	import me from '$lib/assets/images/me.gif';
 </script>
 
 <svelte:head>
-	<title>@pxlinspace</title>
+	<title>pxlinspace</title>
 </svelte:head>
 
 <div style="display: flex; align-items: center">
 	<Window title="intro" flexGrow={1}>
 		<div style="position: relative; z-index: 1; margin-bottom: 60px">
-			<h2>Helooo, I'm <span class="gradient-text">Pixelin</span>! (@pxlinspace)</h2>
+			<h2>Helooo, I'm <WavySpan text="Pixelin" />! (@pxlinspace)</h2>
 			<ul>
 				<li>I'm an 18yo gamedev + animator from San Jose, CA</li>
 				<li>studying Computer Science & Engineering @ <b>UC Irvine</b></li>
@@ -61,23 +62,3 @@
 		<p>eeppp glorp glob</p>
 	</Window>
 </div>
-
-<style>
-	.gradient-text {
-		background: linear-gradient(135deg, #cf39ed, #257beb, #cf39ed);
-		background-size: 400% auto;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		animation: gradient-scroll 10s linear infinite;
-	}
-
-	@keyframes gradient-scroll {
-		from {
-			background-position: 0% center;
-		}
-		to {
-			background-position: 400% center;
-		}
-	}
-</style>

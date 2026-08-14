@@ -7,7 +7,7 @@
 		<img src={imgSrc} alt="thumbnail" />
 	</div>
 	<span class="title" style="color: {titleColor}">{title}</span>
-	<span class="text">{text}</span>
+	<span class="text">- {text}</span>
 </a>
 
 <style>

@@ -34,7 +34,7 @@
 	<div style="display: flex; flex-direction: column;">
 		<Window title="nav">
 			<SideLink href="https://blog.pxlin.space/" iconSrc={iconMap.blog}>blog</SideLink>
-			<SideLink href="/" iconSrc={iconMap.projects}>projects</SideLink>
+			<SideLink href="/projects" iconSrc={iconMap.projects}>projects</SideLink>
 			<SideLink href="/" iconSrc={iconMap.art}>art</SideLink>
 			<SideLink href="/" iconSrc={iconMap.music}>music</SideLink>
 			<SideLink href="/" iconSrc={iconMap.guestbook}>guestbook</SideLink>

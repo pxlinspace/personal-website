@@ -39,28 +39,4 @@
 			transform: translateY(calc(var(--amplitude) * -0.5));
 		}
 	}
-
-	@keyframes rainbow {
-		0% {
-			color: #c62d2d;
-		}
-		17% {
-			color: #d19036;
-		}
-		33% {
-			color: #bebb28;
-		}
-		50% {
-			color: #2abb4c;
-		}
-		67% {
-			color: #257beb;
-		}
-		83% {
-			color: #a839ed;
-		}
-		100% {
-			color: #c62d2d;
-		}
-	}
 </style>

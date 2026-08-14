@@ -2,24 +2,33 @@
 	let { href, imgSrc, title, titleColor = 'var(--foreground-color)', text } = $props();
 </script>
 
-<div class="project">
+<a class="project" {href}>
 	<div class="image-frame">
 		<img src={imgSrc} alt="thumbnail" />
 	</div>
-	<!-- <span style="color: {titleColor}">{title}</span> -
-	<span class="text">{text}</span> -->
-</div>
+	<span class="title" style="color: {titleColor}">{title}</span>
+	<span class="text">{text}</span>
+</a>
 
 <style>
 	.project {
-		width: 100%;
-		aspect-ratio: 16 / 9;
+		transition: transform 0.1s ease-out;
 	}
+	.title {
+		margin: 0;
+	}
+
+	.text {
+		font-size: 0.75rem;
+		color: var(--muted-color);
+	}
+
 	.image-frame {
+		background-color: white;
 		width: 100%;
-		height: 100%;
 		overflow: hidden;
-		transition: height 0.2s ease-out;
+		margin-bottom: 8px;
+		aspect-ratio: 2.5;
 	}
 
 	.image-frame img {
@@ -27,17 +36,17 @@
 		height: 100%;
 		object-fit: cover;
 		display: block;
-		transform: scale(1);
-		transition: transform 0.2s ease-in-out;
+		transition:
+			transform 0.15s ease-in-out,
+			filter 0.15s linear;
 	}
 
 	.project:hover {
-		.image-frame img {
-			transform: scale(1.1);
-		}
-	}
+		transform: translate(0, -5px);
 
-	.text {
-		color: var(--muted-color);
+		.image-frame img {
+			transform: scale(1.05);
+			filter: opacity(85%);
+		}
 	}
 </style>

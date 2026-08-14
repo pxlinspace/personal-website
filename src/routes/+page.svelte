@@ -3,7 +3,7 @@
 	import SideLink from '$lib/components/SideLink.svelte';
 	import IdiotCanvas from '$lib/components/IdiotCanvas.svelte';
 	import WavySpan from '$lib/components/WavySpan.svelte';
-	import { iconMap } from '$lib/icons';
+	import { iconMap } from '$lib/imageMaps';
 	import me from '$lib/assets/images/me.gif';
 </script>
 

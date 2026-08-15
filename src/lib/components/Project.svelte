@@ -3,7 +3,7 @@
 </script>
 
 <a class="project" {href}>
-	<div class="image-frame">
+	<div class="image-frame bordered">
 		<img src={imgSrc} alt="thumbnail" />
 	</div>
 	<span class="title" style="color: {titleColor}">{title}</span>

@@ -1,9 +1,8 @@
 <script lang="ts">
+	import { artMap } from '$lib/imageMaps';
+	import { artData } from './artData';
 	import Backlink from '$lib/components/Backlink.svelte';
-	import Project from '$lib/components/Project.svelte';
-	import { artMap as art } from '$lib/imageMaps';
-
-	import { projectThumbnailMap as thumbnails } from '$lib/imageMaps';
+	import Artwork from '$lib/components/Artwork.svelte';
 </script>
 
 <svelte:head>
@@ -26,13 +25,9 @@
 <p>Click on an image to view it in full with it's description!</p>
 
 <div class="art-container">
-	<img src={art.subway_angels} />
-	<img src={art.blackredgirl} />
-	<img src={art.balloons_around_earth} />
-	<img src={art.eye_of_industrialism} />
-	<img src={art.skull_spraypaint} />
-	<img src={art.skull} />
-	<img src={art.riko} />
+	{#each artData as { name }}
+		<Artwork imgSrc={artMap[name]} />
+	{/each}
 </div>
 
 <style>
@@ -46,16 +41,16 @@
 		z-index: -1;
 	}
 
-	img {
-		width: 100%;
-	}
-
 	.art-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		gap: 8px;
+		gap: 24px;
+		margin: 16px;
 	}
 
 	@media screen and (max-width: 700px) {
+		.art-container {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 </style>

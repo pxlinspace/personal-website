@@ -1,20 +1,21 @@
 <script lang="ts">
-	let { imgSrc } = $props();
+	let { imgSrc, onclick } = $props();
 </script>
 
-<div class="frame bordered">
-	<img src={imgSrc} alt="thumbnail" />
-</div>
+<button class="bordered" {onclick}>
+	<img src={imgSrc} />
+</button>
 
 <style>
-	.frame {
+	button {
+		padding: 0;
 		background-color: white;
 		width: 100%;
 		overflow: hidden;
 		aspect-ratio: 1;
 	}
 
-	.frame img {
+	button img {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
@@ -24,8 +25,8 @@
 			filter 0.15s linear;
 	}
 
-	.frame img:hover {
+	button:hover img {
 		transform: scale(1.05);
-		filter: opacity(85%);
+		filter: opacity(90%);
 	}
 </style>

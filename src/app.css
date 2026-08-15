@@ -50,6 +50,17 @@ a:hover {
 	color: var(--piss-color);
 }
 
+button {
+	background: none;
+	border: none;
+	font: inherit;
+	color: var(--miku-color);
+}
+
+button:hover {
+	color: var(--piss-color);
+}
+
 ul {
 	list-style-type: '*  ';
 }

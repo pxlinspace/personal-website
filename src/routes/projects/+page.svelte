@@ -1,4 +1,5 @@
 <script lang="ts">
+	import TransparentLayer from '$lib/components/TransparentLayer.svelte';
 	import Backlink from '$lib/components/Backlink.svelte';
 	import Project from '$lib/components/Project.svelte';
 
@@ -9,8 +10,7 @@
 	<title>projects &middot; pxlinspace</title>
 </svelte:head>
 
-<div class="white-overlay"></div>
-
+<TransparentLayer />
 <Backlink />
 
 <p>
@@ -97,16 +97,6 @@
 <style>
 	h2 {
 		text-align: center;
-	}
-
-	.white-overlay {
-		background-color: rgb(255, 255, 255, 0.8);
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
 	}
 
 	.projects {

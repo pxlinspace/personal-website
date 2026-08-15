@@ -1,16 +1,23 @@
 <script lang="ts">
 	import { artMap } from '$lib/imageMaps';
 	import { artData } from './artData';
+	import TransparentLayer from '$lib/components/TransparentLayer.svelte';
 	import Backlink from '$lib/components/Backlink.svelte';
 	import Artwork from '$lib/components/Artwork.svelte';
+
+	let selectedArtName: string | null = $state(null);
+
+	const onArtworkClick = (name: string) => {
+		console.log(name);
+		selectedArtName = name;
+	};
 </script>
 
 <svelte:head>
 	<title>art &middot; pxlinspace</title>
 </svelte:head>
 
-<div class="white-overlay"></div>
-
+<TransparentLayer />
 <Backlink />
 
 <p>
@@ -26,26 +33,36 @@
 
 <div class="art-container">
 	{#each artData as { name }}
-		<Artwork imgSrc={artMap[name]} />
+		<Artwork imgSrc={artMap[name]} onclick={() => onArtworkClick(name)} />
 	{/each}
 </div>
 
-<style>
-	.white-overlay {
-		background-color: rgb(255, 255, 255, 0.8);
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-	}
+{#if selectedArtName}
+	<TransparentLayer zIndex={0} opacity={0.9}>
+		<div class="selected-art-display">
+			<img src={artMap[selectedArtName]} />
+			<p>(<button onclick={() => (selectedArtName = null)}>&lt;- back to artworks</button>)</p>
+		</div>
+	</TransparentLayer>
+{/if}
 
+<style>
 	.art-container {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 24px;
 		margin: 16px;
+	}
+
+	.selected-art-display {
+		max-width: 800px;
+		margin: 32px auto;
+		padding: 8px;
+	}
+
+	.selected-art-display img {
+		width: 100%;
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 	}
 
 	@media screen and (max-width: 700px) {

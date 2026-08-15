@@ -24,10 +24,7 @@
 			</p>
 			<ul>
 				<li>bday is December 7</li>
-				<li>
-					INTP 4w5 (I think??? I'm not as into typology anymore since I feel like it limits your
-					perception of your identity)
-				</li>
+				<li>INTP 4w5 (I think???)</li>
 				<li>
 					fav colors are
 					<span class="lavender">&nbsp;lavender&nbsp;</span> and

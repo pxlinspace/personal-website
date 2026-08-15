@@ -1,15 +1,14 @@
 <script lang="ts">
 	import Window from '$lib/components/Window.svelte';
 	import coolestCat from '$lib/assets/images/coolest-cat.png';
+	import Backlink from '$lib/components/Backlink.svelte';
 </script>
 
 <svelte:head>
 	<title>about &middot; pxlinspace</title>
 </svelte:head>
 
-<p>
-	( <a href="/">&lt;- back</a> )
-</p>
+<Backlink />
 
 <Window title="hiiii!!!!!!!">
 	<div style="display: flex;">

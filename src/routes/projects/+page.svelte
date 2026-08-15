@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Backlink from '$lib/components/Backlink.svelte';
 	import Project from '$lib/components/Project.svelte';
 
 	import { projectThumbnailMap as thumbnails } from '$lib/imageMaps';
@@ -10,9 +11,7 @@
 
 <div class="white-overlay"></div>
 
-<p>
-	( <a href="/">&lt;- back</a> )
-</p>
+<Backlink />
 
 <p>
 	Here's a list of projects I made that I think are worth showing off! This is not an exhaustive

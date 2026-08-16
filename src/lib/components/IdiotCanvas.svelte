@@ -1,5 +1,6 @@
 <script lang="ts">
 	// this is the same script from the old website, but turned into a svelte component with AI.
+	import idiotSheet from '$lib/assets/images/idiot-Sheet.png';
 	let canvas: HTMLCanvasElement;
 	let context: CanvasRenderingContext2D;
 
@@ -243,7 +244,7 @@
 
 	$effect(() => {
 		image = new Image();
-		image.src = '/idiot-Sheet.png';
+		image.src = idiotSheet;
 
 		context = canvas.getContext('2d') as CanvasRenderingContext2D;
 

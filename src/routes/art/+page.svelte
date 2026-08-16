@@ -1,16 +1,13 @@
 <script lang="ts">
 	import { artMap } from '$lib/imageMaps';
 	import { artData } from './artData';
+	import type { ArtEntry } from './artData';
+
 	import TransparentLayer from '$lib/components/TransparentLayer.svelte';
 	import Backlink from '$lib/components/Backlink.svelte';
 	import Artwork from '$lib/components/Artwork.svelte';
 
-	let selectedArtName: string | null = $state(null);
-
-	const onArtworkClick = (name: string) => {
-		console.log(name);
-		selectedArtName = name;
-	};
+	let selectedArtwork: ArtEntry | null = $state(null);
 </script>
 
 <svelte:head>
@@ -32,16 +29,23 @@
 <p>Click on an image to view it in full with it's description!</p>
 
 <div class="art-container">
-	{#each artData as { name }}
-		<Artwork imgSrc={artMap[name]} onclick={() => onArtworkClick(name)} />
+	{#each artData as artwork}
+		<Artwork
+			imgSrc={artMap[artwork.name]}
+			alt={artwork.alt}
+			onclick={() => (selectedArtwork = artwork)}
+		/>
 	{/each}
 </div>
 
-{#if selectedArtName}
-	<TransparentLayer zIndex={0} opacity={0.9}>
+{#if selectedArtwork}
+	<TransparentLayer zIndex={0} opacity={0.95} isScroll={true}>
 		<div class="selected-art-display">
-			<img src={artMap[selectedArtName]} />
-			<p>(<button onclick={() => (selectedArtName = null)}>&lt;- back to artworks</button>)</p>
+			<img src={artMap[selectedArtwork.name]} alt={selectedArtwork.alt} />
+			<p>{selectedArtwork.desc}</p>
+			<p class="back-button">
+				(<button onclick={() => (selectedArtwork = null)}>back to artworks</button>)
+			</p>
 		</div>
 	</TransparentLayer>
 {/if}
@@ -58,6 +62,11 @@
 		max-width: 800px;
 		margin: 32px auto;
 		padding: 8px;
+	}
+
+	.back-button {
+		font-size: 1.5rem;
+		text-align: center;
 	}
 
 	.selected-art-display img {

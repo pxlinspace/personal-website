@@ -3,5 +3,5 @@
 </script>
 
 <p>
-	( <a {href}>&lt;- back</a> )
+	( <a {href}>back</a> )
 </p>

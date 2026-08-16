@@ -1,9 +1,9 @@
 <script lang="ts">
-	let { imgSrc, onclick } = $props();
+	let { imgSrc, alt, onclick } = $props();
 </script>
 
 <button class="bordered" {onclick}>
-	<img src={imgSrc} />
+	<img src={imgSrc} {alt} />
 </button>
 
 <style>

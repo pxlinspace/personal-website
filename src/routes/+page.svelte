@@ -4,8 +4,10 @@
 	import IdiotCanvas from '$lib/components/IdiotCanvas.svelte';
 	import WavySpan from '$lib/components/WavySpan.svelte';
 	import Project from '$lib/components/Project.svelte';
+	import BlogPost from '$lib/components/BlogPost.svelte';
 	import { iconMap, projectThumbnailMap as thumbnails } from '$lib/imageMaps';
 	import me from '$lib/assets/images/me.gif';
+	import blogPlaceholder from '$lib/assets/images/blog-placeholder.png';
 
 	let { data } = $props();
 </script>
@@ -60,11 +62,18 @@
 		</Window>
 	</div>
 	<div style="flex-grow: 1">
-		<Window title="news" flexGrow={1}>
-			<p>slkdjflsdjf</p>
-			{#each data.posts as post}
-				<p>{post.title}</p>
-			{/each}
+		<Window title="latest posts" flexGrow={1}>
+			<div class="blog-posts">
+				{#each data.posts as post}
+					<BlogPost
+						title={post.title}
+						href={post.link}
+						pubDate={post.pubDate}
+						description={post.description}
+						imgSrc={`/api/image?url=${encodeURIComponent(post.enclosure?.url || '')}`}
+					/>
+				{/each}
+			</div>
 		</Window>
 		<Window title="featured projects" flexGrow={1}>
 			<div class="projects">
@@ -102,6 +111,12 @@
 </div>
 
 <style>
+	.blog-posts {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 24px;
+		margin: 16px;
+	}
 	.projects {
 		display: grid;
 		grid-template-columns: 1fr 1fr;

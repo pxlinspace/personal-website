@@ -54,9 +54,6 @@
 				bluesky
 			</SideLink>
 			<SideLink href="https://www.tumblr.com/pxlinspace" iconSrc={iconMap.tumblr}>tumblr</SideLink>
-			<SideLink href="https://sunny.garden/@pxlinspace" iconSrc={iconMap.mastodon}>
-				mastodon
-			</SideLink>
 			<SideLink href="https://pxlinspace.itch.io" iconSrc={iconMap.itchio}>itch.io</SideLink>
 			<SideLink href="https://www.github.com/pxlinspace" iconSrc={iconMap.github}>github</SideLink>
 		</Window>

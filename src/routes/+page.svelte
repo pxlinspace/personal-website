@@ -6,6 +6,8 @@
 	import Project from '$lib/components/Project.svelte';
 	import { iconMap, projectThumbnailMap as thumbnails } from '$lib/imageMaps';
 	import me from '$lib/assets/images/me.gif';
+
+	let { data } = $props();
 </script>
 
 <svelte:head>
@@ -59,7 +61,10 @@
 	</div>
 	<div style="flex-grow: 1">
 		<Window title="news" flexGrow={1}>
-			<p>eeppp glorp glob</p>
+			<p>slkdjflsdjf</p>
+			{#each data.posts as post}
+				<p>{post.title}</p>
+			{/each}
 		</Window>
 		<Window title="featured projects" flexGrow={1}>
 			<div class="projects">

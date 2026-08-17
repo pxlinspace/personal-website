@@ -77,12 +77,12 @@ li {
 	image-rendering: pixelated;
 }
 
-.responsive-row-to-column {
+.row-to-col {
 	display: flex;
 	flex-direction: row;
 }
 
-.responsive-column-to-row {
+.col-to-row {
 	display: flex;
 	flex-direction: column;
 }
@@ -125,10 +125,10 @@ li {
 	html {
 		font-size: 28px;
 	}
-	.responsive-row-to-column {
+	.row-to-col {
 		flex-direction: column;
 	}
-	.responsive-column-to-row {
+	.col-to-row {
 		flex-direction: row;
 	}
 	.hide-on-shrink {

@@ -11,7 +11,7 @@
 <Backlink />
 
 <Window title="hiiii!!!!!!!">
-	<div style="display: flex;">
+	<div class="row-to-col" style="align-items: center">
 		<div>
 			<p>
 				Hello random internet person! I'm Pixelin, a person that likes to make silly useless and
@@ -35,9 +35,7 @@
 		<img
 			src={coolestCat}
 			alt="the coolest cat doing a kickflip on a skateboard"
-			class="pixelated"
-			width="432px"
-			height="432px"
+			class="pixelated coolest-cat"
 		/>
 	</div>
 </Window>
@@ -281,6 +279,12 @@
 </Window>
 
 <style>
+	.coolest-cat {
+		object-fit: contain;
+		width: 100%;
+		max-width: 432px;
+		max-height: 432px;
+	}
 	.lavender {
 		background-color: #af93d5;
 		color: black;

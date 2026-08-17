@@ -7,7 +7,6 @@
 	import BlogPost from '$lib/components/BlogPost.svelte';
 	import { iconMap, projectThumbnailMap as thumbnails } from '$lib/imageMaps';
 	import me from '$lib/assets/images/me.gif';
-	import blogPlaceholder from '$lib/assets/images/blog-placeholder.png';
 
 	let { data } = $props();
 </script>
@@ -29,10 +28,11 @@
 		</div>
 		<IdiotCanvas />
 	</Window>
-
-	<Window title="me" isContentBoxed={false}>
-		<img src={me} alt="Pixelin" class="bordered pixelated" width="240px" />
-	</Window>
+	<div class="hide-on-shrink">
+		<Window title="me" isContentBoxed={false}>
+			<img src={me} alt="Pixelin" class="bordered pixelated" width="240px" />
+		</Window>
+	</div>
 </div>
 
 <div style="display: flex">
@@ -62,19 +62,6 @@
 		</Window>
 	</div>
 	<div style="flex-grow: 1">
-		<Window title="latest posts" flexGrow={1}>
-			<div class="blog-posts">
-				{#each data.posts as post}
-					<BlogPost
-						title={post.title}
-						href={post.link}
-						pubDate={post.pubDate}
-						description={post.description}
-						imgSrc={`/api/image?url=${encodeURIComponent(post.enclosure?.url || '')}`}
-					/>
-				{/each}
-			</div>
-		</Window>
 		<Window title="featured projects" flexGrow={1}>
 			<div class="projects">
 				<Project
@@ -105,6 +92,19 @@
 					titleColor="#81295E"
 					text="a precision puzzle game with only one button - made for GMTK Game Jam 2025"
 				/>
+			</div>
+		</Window>
+		<Window title="latest posts" flexGrow={1}>
+			<div class="blog-posts">
+				{#each data.posts as post}
+					<BlogPost
+						title={post.title}
+						href={post.link}
+						pubDate={post.pubDate}
+						description={post.description}
+						imgSrc={`/api/image?url=${encodeURIComponent(post.enclosure?.url || '')}`}
+					/>
+				{/each}
 			</div>
 		</Window>
 	</div>

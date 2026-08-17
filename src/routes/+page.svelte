@@ -3,7 +3,8 @@
 	import SideLink from '$lib/components/SideLink.svelte';
 	import IdiotCanvas from '$lib/components/IdiotCanvas.svelte';
 	import WavySpan from '$lib/components/WavySpan.svelte';
-	import { iconMap } from '$lib/imageMaps';
+	import Project from '$lib/components/Project.svelte';
+	import { iconMap, projectThumbnailMap as thumbnails } from '$lib/imageMaps';
 	import me from '$lib/assets/images/me.gif';
 </script>
 
@@ -36,7 +37,6 @@
 			<SideLink href="https://blog.pxlin.space/" iconSrc={iconMap.blog}>blog</SideLink>
 			<SideLink href="/projects" iconSrc={iconMap.projects}>projects</SideLink>
 			<SideLink href="/art" iconSrc={iconMap.art}>art</SideLink>
-			<SideLink href="/" iconSrc={iconMap.guestbook}>guestbook</SideLink>
 		</Window>
 
 		<Window title="socials">
@@ -57,7 +57,50 @@
 			<SideLink href="https://www.github.com/pxlinspace" iconSrc={iconMap.github}>github</SideLink>
 		</Window>
 	</div>
-	<Window title="news" flexGrow={1}>
-		<p>eeppp glorp glob</p>
-	</Window>
+	<div style="flex-grow: 1">
+		<Window title="news" flexGrow={1}>
+			<p>eeppp glorp glob</p>
+		</Window>
+		<Window title="featured projects" flexGrow={1}>
+			<div class="projects">
+				<Project
+					href="https://pxlinspace.itch.io/ticstep-3d"
+					imgSrc={thumbnails.ticstep3d}
+					title="TICSTEP 3D"
+					titleColor="#6C6CCE"
+					text="a fast-paced puzzle game with tiles that tick down - made for GMTK Game Jam 2026"
+				/>
+				<Project
+					href="https://pxlinspace.itch.io/ghost-in-the-machine"
+					imgSrc={thumbnails.ghostinthemachine}
+					title="Ghost in the Machine"
+					titleColor="#812525"
+					text="yuri of a mech pilot and her commander - made for TOXIC YURI VN JAM 2"
+				/>
+				<Project
+					href="https://that-blob.itch.io/smolx2"
+					imgSrc={thumbnails.smolx2}
+					title="smolx2"
+					titleColor="#FF00DD"
+					text="A unique take on Connect 4 involving magic rings - made during Hack Club's Horizons Nexus hackathon"
+				/>
+				<Project
+					href="https://pxlinspace.itch.io/dreamskater"
+					imgSrc={thumbnails.dreamskater}
+					title="DREAMSKATER"
+					titleColor="#81295E"
+					text="a precision puzzle game with only one button - made for GMTK Game Jam 2025"
+				/>
+			</div>
+		</Window>
+	</div>
 </div>
+
+<style>
+	.projects {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+		margin: 16px;
+	}
+</style>

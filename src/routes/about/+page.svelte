@@ -223,7 +223,7 @@
 			<li>I currently use OpenSUSE Tumbleweed Linux with Niri as my window manager!</li>
 			<li>Godot is my primary game engine, but I used to be a big fan of LÖVE.</li>
 			<li>VSCode is my general purpose code editor</li>
-			<li>I use AFFiNE for notes, planning, & journaling</li>
+			<li>I use Obsidian for notes, planning, & journaling</li>
 			<li>Todoist for task management</li>
 			<li>Zen Browser for web!</li>
 		</ul>

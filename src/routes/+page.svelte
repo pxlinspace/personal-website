@@ -7,7 +7,6 @@
 	import BlogPost from '$lib/components/BlogPost.svelte';
 	import { iconMap, projectThumbnailMap as thumbnails } from '$lib/imageMaps';
 	import me from '$lib/assets/images/me.gif';
-	import placeholder from '$lib/assets/images/blog-placeholder.png';
 	import InactiveSideLink from '$lib/components/InactiveSideLink.svelte';
 
 	let { data } = $props();
@@ -113,20 +112,6 @@
 						imgSrc={`/api/image?url=${encodeURIComponent(post.enclosure?.url || '')}`}
 					/>
 				{/each}
-				<!-- <BlogPost
-					title="bruh"
-					href="https://blog.pxlin.space/"
-					pubDate="Dec 1, 2026"
-					description="hiii this is a placeholder"
-					imgSrc={placeholder}
-				/>
-				<BlogPost
-					title="bruh"
-					href="https://blog.pxlin.space/"
-					pubDate="Dec 1, 2026"
-					description="hiii this is a placeholder"
-					imgSrc={placeholder}
-				/> -->
 			</div>
 		</Window>
 	</div>

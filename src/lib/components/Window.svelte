@@ -1,12 +1,12 @@
 <script lang="ts">
-	let { title, flexGrow = 0, isContentBoxed = true, children } = $props();
+	let { title, flexGrow = 0, isContentBoxed = true, padding = '8px', children } = $props();
 	import pxlin from '$lib/assets/images/pxlin.png';
 </script>
 
 <div class="outer-border bordered" style="flex-grow: {flexGrow};">
 	<h1 class="bar bordered"><img src={pxlin} class="icon" alt="icon" /> {title}</h1>
 	{#if isContentBoxed}
-		<div class="content bordered">
+		<div class="content bordered" style="padding: {padding};">
 			{@render children?.()}
 		</div>
 	{:else}
@@ -41,7 +41,6 @@
 	.content {
 		background: white;
 		flex-grow: 1;
-		padding: 0.25rem;
 		position: relative;
 	}
 </style>

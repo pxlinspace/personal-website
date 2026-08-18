@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Window from '$lib/components/Window.svelte';
 	import SideLink from '$lib/components/SideLink.svelte';
+	import InactiveSideLink from '$lib/components/InactiveSideLink.svelte';
 	import IdiotCanvas from '$lib/components/IdiotCanvas.svelte';
 	import WavySpan from '$lib/components/WavySpan.svelte';
 	import Project from '$lib/components/Project.svelte';
 	import BlogPost from '$lib/components/BlogPost.svelte';
 	import { iconMap, projectThumbnailMap as thumbnails } from '$lib/imageMaps';
 	import me from '$lib/assets/images/me.gif';
-	import InactiveSideLink from '$lib/components/InactiveSideLink.svelte';
 
 	let { data } = $props();
 </script>
@@ -24,7 +24,6 @@
 				<li>I'm an 18yo gamedev + animator from San Jose, CA</li>
 				<li>studying Computer Science & Engineering @ <b>UC Irvine</b></li>
 			</ul>
-
 			<p>(<a href="/about">more about me</a>)</p>
 		</div>
 		<IdiotCanvas />
@@ -65,6 +64,34 @@
 				<SideLink href="https://www.github.com/pxlinspace" iconSrc={iconMap.github}>
 					github
 				</SideLink>
+			</div>
+		</Window>
+
+		<Window title="buttons" padding="4px">
+			<div class="buttons">
+				<img
+					src="/button.gif"
+					alt="pxlin.space"
+					title="feel free to hotlink my button to your website!"
+				/>
+				<a href="https://karim-makes.vercel.app/" target="_blank">
+					<img src="https://karim-makes.vercel.app/button.gif" alt="karim-makes" />
+				</a>
+				<a href="https://www.deltea.space/" target="_blank">
+					<img src="https://www.deltea.space/antipixel/deltea-space.gif" alt="deltea.space" />
+				</a>
+				<a href="https://gideon.sh/" target="_blank">
+					<img src="https://gideon.sh/88x31.gif" alt="gideon.sh" />
+				</a>
+				<a href="https://irispond.net/" target="_blank">
+					<img src="https://irispond.net/images/irisbutton.png" alt="irispond.net" />
+				</a>
+				<a href="https://noob-dev.fyi/" target="_blank">
+					<img src="https://noob-dev.fyi/assets/88x31/noob88x31.gif" alt="noob-dev" />
+				</a>
+				<a href="https://vvqb.dev/" target="_blank">
+					<img src="https://vvqb.dev/88x31/vvqb_dev.gif" alt="vvqb.dev" />
+				</a>
 			</div>
 		</Window>
 	</div>
@@ -118,6 +145,15 @@
 </div>
 
 <style>
+	.buttons {
+		min-width: 180px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4px;
+	}
+	.buttons img {
+		display: block;
+	}
 	.projects {
 		display: grid;
 		grid-template-columns: 1fr 1fr;

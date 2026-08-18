@@ -1,42 +1,28 @@
-# sv
+# Personal Website ✨
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This is my website where I display info about myself, including links to my projects, socials, and blog! It's is also meant as a fun way for me to express myself while playing around with web development.
 
-## Creating a project
+This was made in SvelteKit, and is a continuation of my [old personal website](https://github.com/pxlinspace/piksalchaos.github.io), which was written in plain HTML+CSS+JS.
 
-If you're seeing this, you've probably already done this step. Congrats!
+See the site [here](https://pxlin.space/)!
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## Features
+- Custom pixel art icons created with Aseprite
+- Fish background created with HTML canvas
+- Silly walking idiots on the home page that you can drag around. Also created with HTML canvas
+- The font is [Nintendo DS BIOS](https://www.dafont.com/nintendo-ds-bios.font)
+- The window style was inspired by Needy Streamer Overload
+- This website's design was inspired by the retro style of Neocities and Nekoweb websites. I wanted to emulate the charm of the old web while still keeping my site's content clear and easy to navigate. 
+- This site is fully responsive for mobile displays!
+- I also spent 2 hours animating this [88x31 button](https://pxlin.space/button.gif)
 
-To recreate this project with the same configuration:
+## AI Usage Declaration
+This project was assisted by Zed editor's and Github Copilot's predictions.
 
-```sh
-# recreate this project
-pnpm dlx sv@0.17.0 create --template minimal --types ts --add prettier eslint --install pnpm personal-website
-```
+Github Copilot was used to generate the code for:
+- parsing blog RSS feed to a JS object
+- efficiently importing all images from a folder into a js object
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Claude was also used to help with:
+- writing the code for the rainbow text
+- converting the html canvases from the old website into svelte components

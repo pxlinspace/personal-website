@@ -95,6 +95,9 @@
 				<a href="https://3kh0.net/" target="_blank">
 					<img src="https://3kh0.net/button@2x.png" alt="3kho.net" width="88px" />
 				</a>
+				<a href="https://froppii.dev/" target="_blank">
+					<img src="https://froppii.dev/button.gif" alt="froppii.dev" width="88px" />
+				</a>
 			</div>
 		</Window>
 	</div>

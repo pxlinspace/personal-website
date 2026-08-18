@@ -33,7 +33,7 @@
 	}
 	.bar {
 		background: linear-gradient(90deg, #f4dbff 0%, #c9c9ff 100%);
-		font-size: 1rem;
+		font-size: 2rem;
 		font-weight: normal;
 		margin: 0 0 3px 0;
 		padding: 0 6px 2px 6px;

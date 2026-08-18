@@ -30,14 +30,14 @@
 }
 
 html {
-	font-size: 32px;
+	font-size: 16px;
 }
 
 body {
 	background: var(--background-color);
 	color: var(--foreground-color);
 	font-family: ds-bios, sans-serif;
-	font-size: 1rem;
+	font-size: 2rem;
 	max-width: 960px;
 	margin: 16px auto;
 	padding: 8px;
@@ -134,7 +134,7 @@ li {
 
 @media screen and (max-width: 700px) {
 	html {
-		font-size: 28px;
+		font-size: 14px;
 	}
 	.row-to-col {
 		flex-direction: column;

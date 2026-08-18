@@ -92,6 +92,9 @@
 				<a href="https://vvqb.dev/" target="_blank">
 					<img src="https://vvqb.dev/88x31/vvqb_dev.gif" alt="vvqb.dev" />
 				</a>
+				<a href="https://3kh0.net/" target="_blank">
+					<img src="https://3kh0.net/button@2x.png" alt="3kho.net" width="88px" />
+				</a>
 			</div>
 		</Window>
 	</div>
@@ -141,6 +144,9 @@
 				{/each}
 			</div>
 		</Window>
+		<div class="webrings">
+			<pagering-link theme="light"></pagering-link>
+		</div>
 	</div>
 </div>
 
@@ -165,6 +171,11 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 16px;
 		margin: 8px;
+	}
+	.webrings {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 	@media screen and (max-width: 700px) {
 		.side-links {

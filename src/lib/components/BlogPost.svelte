@@ -6,14 +6,24 @@
 	<div class="image-frame bordered">
 		<img src={imgSrc} alt="blog post thumbnail" />
 	</div>
-	<span class="title">{title}</span>
-	<span class="text">- {description} ({pubDate})</span>
+	<p class="text">
+		<span class="title">{title}</span>
+		<span class="description">- {description} ({pubDate})</span>
+	</p>
 </a>
 
 <style>
 	.blog-post {
 		transition: transform 0.1s ease-out;
 		padding: 8px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.text {
+		margin: 0;
 	}
 
 	.title {
@@ -21,7 +31,7 @@
 		color: var(--foreground-color);
 	}
 
-	.text {
+	.description {
 		font-size: 0.75rem;
 		color: var(--muted-color);
 	}
@@ -30,12 +40,13 @@
 		background-color: white;
 		overflow: hidden;
 		aspect-ratio: 4 / 3;
-		margin-bottom: 8px;
+		max-height: 160px;
 	}
 
 	.image-frame img {
 		width: 100%;
 		height: 100%;
+
 		object-fit: cover;
 		display: block;
 		transition:

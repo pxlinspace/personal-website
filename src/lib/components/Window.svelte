@@ -1,11 +1,12 @@
 <script lang="ts">
 	let { title, flexGrow = 0, isContentBoxed = true, children } = $props();
+	import pxlin from '$lib/assets/images/pxlin.png';
 </script>
 
 <div class="outer-border bordered" style="flex-grow: {flexGrow};">
-	<h1 class="bar">{title}</h1>
+	<h1 class="bar bordered"><img src={pxlin} class="icon" /> {title}</h1>
 	{#if isContentBoxed}
-		<div class="content">
+		<div class="content bordered">
 			{@render children?.()}
 		</div>
 	{:else}
@@ -14,9 +15,17 @@
 </div>
 
 <style>
+	.icon {
+		filter: invert(32%) sepia(7%) saturate(2364%) hue-rotate(208deg) brightness(95%) contrast(87%);
+		width: 16px;
+		height: 16px;
+		image-rendering: pixelated;
+		margin-left: 6px;
+		margin-right: 3px;
+	}
+
 	.outer-border {
-		background: white;
-		border: 3px solid var(--foreground-color);
+		background: var(--window-color);
 		margin: 12px;
 		padding: 3px;
 		display: flex;
@@ -24,16 +33,15 @@
 		height: fit-content;
 	}
 	.bar {
-		background: var(--foreground-color);
-		color: var(--background-color);
+		background: var(--window-bar-color);
 		font-size: 1rem;
 		font-weight: normal;
 		margin: 0 0 3px 0;
-		padding: 0 8px 4px 8px;
+		padding-bottom: 2px;
 	}
 	.content {
+		background: white;
 		flex-grow: 1;
-		border: 3px solid var(--foreground-color);
 		padding: 0.25rem;
 		position: relative;
 	}

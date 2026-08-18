@@ -7,6 +7,8 @@
 	import BlogPost from '$lib/components/BlogPost.svelte';
 	import { iconMap, projectThumbnailMap as thumbnails } from '$lib/imageMaps';
 	import me from '$lib/assets/images/me.gif';
+	import placeholder from '$lib/assets/images/blog-placeholder.png';
+	import InactiveSideLink from '$lib/components/InactiveSideLink.svelte';
 
 	let { data } = $props();
 </script>
@@ -35,27 +37,36 @@
 	</div>
 </div>
 
-<div style="display: flex">
-	<div style="display: flex; flex-direction: column;">
+<div class="row-to-col">
+	<div>
 		<Window title="nav">
-			<SideLink href="https://blog.pxlin.space/" iconSrc={iconMap.blog}>blog</SideLink>
-			<SideLink href="/projects" iconSrc={iconMap.projects}>projects</SideLink>
-			<SideLink href="/art" iconSrc={iconMap.art}>art</SideLink>
+			<div class="side-links">
+				<SideLink href="https://blog.pxlin.space/" iconSrc={iconMap.blog}>blog</SideLink>
+				<SideLink href="/projects" iconSrc={iconMap.projects}>projects</SideLink>
+				<SideLink href="/art" iconSrc={iconMap.art}>art</SideLink>
+				<InactiveSideLink iconSrc={iconMap.guestbook}>guestbook</InactiveSideLink>
+			</div>
 		</Window>
 
 		<Window title="socials">
-			<SideLink href="https://www.youtube.com/@pxlinspace" iconSrc={iconMap.youtube}>
-				youtube
-			</SideLink>
-			<SideLink href="https://www.instagram.com/pxlin.space" iconSrc={iconMap.instagram}>
-				instagram
-			</SideLink>
-			<SideLink href="https://bsky.app/profile/pxlin.space" iconSrc={iconMap.bluesky}>
-				bluesky
-			</SideLink>
-			<SideLink href="https://www.tumblr.com/pxlinspace" iconSrc={iconMap.tumblr}>tumblr</SideLink>
-			<SideLink href="https://pxlinspace.itch.io" iconSrc={iconMap.itchio}>itch.io</SideLink>
-			<SideLink href="https://www.github.com/pxlinspace" iconSrc={iconMap.github}>github</SideLink>
+			<div class="side-links">
+				<SideLink href="https://www.youtube.com/@pxlinspace" iconSrc={iconMap.youtube}>
+					youtube
+				</SideLink>
+				<SideLink href="https://www.instagram.com/pxlin.space" iconSrc={iconMap.instagram}>
+					instagram
+				</SideLink>
+				<SideLink href="https://bsky.app/profile/pxlin.space" iconSrc={iconMap.bluesky}>
+					bluesky
+				</SideLink>
+				<SideLink href="https://www.tumblr.com/pxlinspace" iconSrc={iconMap.tumblr}>
+					tumblr
+				</SideLink>
+				<SideLink href="https://pxlinspace.itch.io" iconSrc={iconMap.itchio}>itch.io</SideLink>
+				<SideLink href="https://www.github.com/pxlinspace" iconSrc={iconMap.github}>
+					github
+				</SideLink>
+			</div>
 		</Window>
 	</div>
 	<div style="flex-grow: 1">
@@ -102,22 +113,51 @@
 						imgSrc={`/api/image?url=${encodeURIComponent(post.enclosure?.url || '')}`}
 					/>
 				{/each}
+				<!-- <BlogPost
+					title="bruh"
+					href="https://blog.pxlin.space/"
+					pubDate="Dec 1, 2026"
+					description="hiii this is a placeholder"
+					imgSrc={placeholder}
+				/>
+				<BlogPost
+					title="bruh"
+					href="https://blog.pxlin.space/"
+					pubDate="Dec 1, 2026"
+					description="hiii this is a placeholder"
+					imgSrc={placeholder}
+				/> -->
 			</div>
 		</Window>
 	</div>
 </div>
 
 <style>
-	.blog-posts {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 24px;
-		margin: 16px;
-	}
 	.projects {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 24px;
 		margin: 16px;
+	}
+	.blog-posts {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 16px;
+		margin: 8px;
+	}
+	@media screen and (max-width: 700px) {
+		.side-links {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: 8px;
+			column-gap: 48px;
+			justify-content: center;
+		}
+		.projects {
+			grid-template-columns: 1fr;
+		}
+		.blog-posts {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

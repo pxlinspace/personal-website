@@ -17,7 +17,7 @@
 	<title>pxlinspace</title>
 </svelte:head>
 
-<div style="display: flex; align-items: center">
+<div style="align-items: center" class="row">
 	<Window title="intro" flexGrow={1}>
 		<div style="position: relative; z-index: 1; margin-bottom: 60px">
 			<h2>Helooo, I'm <WavySpan text="Pixelin" />! (@pxlinspace)</h2>
@@ -38,7 +38,7 @@
 </div>
 
 <div class="row-to-col">
-	<div>
+	<div class="col">
 		<Window title="nav">
 			<div class="side-links">
 				<SideLink href="https://blog.pxlin.space/" iconSrc={iconMap.blog}>blog</SideLink>
@@ -69,7 +69,7 @@
 			</div>
 		</Window>
 	</div>
-	<div style="flex-grow: 1">
+	<div style="flex-grow: 1" class="col">
 		<Window title="featured projects" flexGrow={1}>
 			<div class="projects">
 				<Project

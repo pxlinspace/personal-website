@@ -4,7 +4,7 @@
 </script>
 
 <div class="outer-border bordered" style="flex-grow: {flexGrow};">
-	<h1 class="bar bordered"><img src={pxlin} class="icon" /> {title}</h1>
+	<h1 class="bar bordered"><img src={pxlin} class="icon" alt="icon" /> {title}</h1>
 	{#if isContentBoxed}
 		<div class="content bordered">
 			{@render children?.()}
@@ -20,12 +20,11 @@
 		width: 16px;
 		height: 16px;
 		image-rendering: pixelated;
-		margin-left: 6px;
 		margin-right: 3px;
 	}
 
 	.outer-border {
-		background: var(--window-color);
+		background: rgb(185, 234, 255);
 		margin: 12px;
 		padding: 3px;
 		display: flex;
@@ -33,11 +32,11 @@
 		height: fit-content;
 	}
 	.bar {
-		background: var(--window-bar-color);
+		background: linear-gradient(90deg, #f4dbff 0%, #c9c9ff 100%);
 		font-size: 1rem;
 		font-weight: normal;
 		margin: 0 0 3px 0;
-		padding-bottom: 2px;
+		padding: 0 6px 2px 6px;
 	}
 	.content {
 		background: white;

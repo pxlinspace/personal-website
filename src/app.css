@@ -6,9 +6,6 @@
 	--miku-color: #6ea398;
 	--piss-color: #dcb34c;
 
-	--window-bar-color: #f4dbff;
-	--window-color: #b1e8ff;
-
 	--red-color: #c62d2d;
 	--orange-color: #d19036;
 	--yellow-color: #bebb28;
@@ -79,6 +76,16 @@ li {
 
 .pixelated {
 	image-rendering: pixelated;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
 }
 
 .row-to-col {

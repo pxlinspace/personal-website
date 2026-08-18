@@ -174,6 +174,10 @@
 			column-gap: 48px;
 			justify-content: center;
 		}
+		.buttons {
+			display: flex;
+			flex-wrap: wrap;
+		}
 		.projects {
 			grid-template-columns: 1fr;
 		}
